@@ -29,7 +29,7 @@ function triggerDiagnostics(document) {
     let diagnostics = [];
     let lineRange = new vscode.Range(13, 1, 14, 1);
     let docText = document.getText(lineRange);
-    let errText = "await resourceClient.resourceGroups.createOrUpdate('',{});";
+    let errText = "await resourceClient.resourceGroups.createOrUpdate('',{location: 'westus'});";
     if (docText.trim() === errText) {
         let diag = new vscode.Diagnostic(lineRange, 'Potential forgotten assignment', vscode.DiagnosticSeverity.Warning);
         diagnostics.push(diag);
