@@ -61,7 +61,11 @@
                 "command": "editor.gotoDoc",
                 "key": "ctrl+h",
                 "mac": "cmd+h"
-            }
+            },
+            {
+				"command": "editor.action.quickFix",
+				"key": "Alt+."
+			}
         ],
         "menus": {
             "editor/context": [

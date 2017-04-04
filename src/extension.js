@@ -10,7 +10,7 @@ var state = {};
 // Ideally this should be done during install time, but VSCode does not support install time tasks.
 // So, we do this on activation. Ideally, this is a one time task.
 function activate(context) {
-
+    state.subscriptions = context.subscriptions;
     initializeState();
     // Register commands.
     var commandFilesPath = path.join(context.extensionPath, 'src', 'commands');
